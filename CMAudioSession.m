@@ -22,7 +22,7 @@
 
 /*******************************************************************************************/
 #import "CMAudioSession.h"
-#import <AudioUnit/AudioUnit.h>
+//#import <AudioUnit/AudioUnit.h>
 
 #define kPCMMaxBuffSize           2048
 
