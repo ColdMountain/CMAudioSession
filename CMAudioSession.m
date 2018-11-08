@@ -86,7 +86,7 @@ enum ChannelCount
     status = AudioComponentInstanceNew(inputComponent, &_audioUnit);
     if (status != noErr)  {
         _audioUnit = NULL;
-        NSLog(@"couldn't create a new instance of AURemoteIO, status : %d \n",status);
+//        NSLog(@"couldn't create a new instance of AURemoteIO, status : %d \n",status);
     }
 }
 
@@ -122,7 +122,7 @@ enum ChannelCount
                                   &dataFormat,
                                   sizeof(dataFormat));
     if (status != noErr) {
-        NSLog(@"couldn't set the input client format on AURemoteIO, status : %d \n",status);
+//        NSLog(@"couldn't set the input client format on AURemoteIO, status : %d \n",status);
     }
     // 去除回声开关
     UInt32 echoCancellation;
@@ -143,7 +143,7 @@ enum ChannelCount
                                        sizeof(flag));
     
     if (status != noErr) {
-        NSLog(@"could not enable input on AURemoteIO, status : %d \n",status);
+//        NSLog(@"could not enable input on AURemoteIO, status : %d \n",status);
     }
 }
 
@@ -186,7 +186,7 @@ enum ChannelCount
                                                            sizeof(recordCallback));
     
     if (status != noErr) {
-        NSLog(@"Audio Unit set record Callback failed, status : %d \n",status);
+//        NSLog(@"Audio Unit set record Callback failed, status : %d \n",status);
     }
 }
 
@@ -457,7 +457,7 @@ void caculate_bm_db(void * const data ,size_t length ,int64_t timestamp, enum Ch
     OSStatus status;
     [self initGlobalVar];
     status = AudioOutputUnitStart(_audioUnit);
-    NSLog(@"AudioOutputUnitStart status : %d \n",status);
+//    NSLog(@"AudioOutputUnitStart status : %d \n",status);
     if (status == noErr) {
     }
 }
